@@ -44,4 +44,10 @@
 
 ## 发布副本最终重跑
 
-`tools/run_offline_tests.py` 合并运行 18 个文件：**147 passed**，没有连接 ROS 或硬件。打包检查通过：4 个 ROS 包、28 个有效 console 入口、7 个固定抓取摘要。GitHub CI、Linux/ROS 构建仍未执行。
+`tools/run_offline_tests.py` 合并运行 18 个文件：**147 passed**，没有连接 ROS 或硬件。打包检查通过：4 个 ROS 包、28 个有效 console 入口、7 个固定抓取摘要。首次整理时 GitHub CI 尚未执行；上传后的结果见下一节。ROS 全包构建和实机验收仍未执行。
+
+## GitHub 首次发布验证
+
+2026-10-20，公开仓库 `Parco3037/little-car-ros2` 的提交 `8b534110761cabfd777069d1ec818c337b49a385` 已完成 [GitHub Actions 无头检查](https://github.com/Parco3037/little-car-ros2/actions/runs/39431997030)：Ubuntu 22.04 / Python 3.10，**147 passed**，打包检查和七个固定抓取摘要全部通过。
+
+已从公开仓库重新克隆，确认 291 个文件的完整 Git 文件树与发布副本一致，28 个 console 入口及七个固定摘要再次通过检查。已知历史测试失败仍按上表保留；这次绿色检查仅覆盖明确列出的离线子集，不证明 ROS 全包构建、导航故障注入或实机控制通过。
