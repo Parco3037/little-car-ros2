@@ -1,0 +1,13 @@
+{
+  "name": "mapping_rest_user_20260908",
+  "duration_s": 3.0,
+  "tolerance_pulse": 15,
+  "positions": {
+    "1": 454,
+    "2": 816,
+    "3": 221,
+    "4": 52,
+    "5": 866,
+    "10": 50
+  }
+}

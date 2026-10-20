@@ -1,0 +1,17 @@
+[Unit]
+Description=RAICOM independent base velocity watchdog
+Requires=docker.service
+After=docker.service start_app_node.service
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/docker exec -u ubuntu -w /home/ubuntu MentorPi /bin/zsh -lc 'source /opt/ros/humble/setup.zsh && source /home/ubuntu/ros2_ws/install/setup.zsh && exec ros2 run raicom_control cmd_vel_guard'
+ExecStop=/usr/bin/docker exec -u ubuntu -w /home/ubuntu MentorPi /bin/zsh -lc 'source /opt/ros/humble/setup.zsh && source /home/ubuntu/ros2_ws/install/setup.zsh && ros2 topic pub --once /controller/cmd_vel geometry_msgs/msg/Twist "{}"'
+Restart=always
+RestartSec=2
+TimeoutStopSec=8
+
+[Install]
+WantedBy=multi-user.target
+

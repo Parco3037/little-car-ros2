@@ -1,0 +1,16 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.patch text eol=lf
+# Preserve exact bytes required by depth_pick_release.py, including mixed EOLs.
+src/rgbd_grasp/rgbd_grasp/blue_block_3d_node.py -text
+src/rgbd_grasp/rgbd_grasp/target_to_ik_node.py -text
+src/rgbd_grasp/rgbd_grasp/grasp_core.py -text
+src/rgbd_grasp/rgbd_grasp/grasp_clearance.py -text
+src/rgbd_grasp/rgbd_grasp/grasp_hardware.py -text
+src/rgbd_grasp/rgbd_grasp/grasp_once_node.py -text
+src/rgbd_grasp/launch/rgbd_grasp.launch.py -text

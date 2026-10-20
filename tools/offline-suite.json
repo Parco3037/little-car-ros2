@@ -1,0 +1,23 @@
+{
+  "scope": "Explicit headless subset; not a claim that the full ROS or historical test suite passes",
+  "tests": [
+    "src/rgbd_grasp/test/test_grasp_core.py",
+    "src/raicom_control/test/test_aurora_observer_logic.py",
+    "src/raicom_control/test/test_field_tool_model.py",
+    "src/raicom_control/test/test_field_tool_recovery.py",
+    "src/raicom_control/test/test_fixed_map_resume.py",
+    "src/raicom_control/test/test_guard_logic.py",
+    "src/raicom_control/test/test_lightweight_urdf.py",
+    "src/raicom_control/test/test_localization_handoff.py",
+    "src/raicom_control/test/test_map_localization_recovery.py",
+    "src/raicom_control/test/test_mapping_logic.py",
+    "src/raicom_control/test/test_mission_logic.py",
+    "src/raicom_control/test/test_nav_control_logic.py",
+    "src/raicom_control/test/test_nav_scan_geometry.py",
+    "src/raicom_control/test/test_odom_bridge_logic.py",
+    "src/raicom_control/test/test_runtime_fusion_gate.py",
+    "src/raicom_control/test/test_scene_mission_logic.py",
+    "src/raicom_control/test/test_speed_transaction.py",
+    "src/raicom_control/test/test_yolo_roi_logic.py"
+  ]
+}

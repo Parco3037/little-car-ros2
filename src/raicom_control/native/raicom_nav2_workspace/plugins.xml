@@ -1,0 +1,6 @@
+<library path="raicom_nav2_workspace">
+  <class name="raicom_nav2_workspace::SettledGoalChecker" type="raicom_nav2_workspace::SettledGoalChecker" base_class_type="nav2_core::GoalChecker"><description>Non-latching 2cm/10deg acceptance after a stationary half-second hold.</description></class>
+  <class name="raicom_nav2_workspace::ExactGoalPlanner" type="raicom_nav2_workspace::ExactGoalPlanner" base_class_type="nav2_core::GlobalPlanner"><description>ThetaStar path with exact requested goal endpoint.</description></class>
+  <class name="raicom_nav2_workspace::PhasedDwbController" type="raicom_nav2_workspace::PhasedDwbController" base_class_type="nav2_core::Controller"><description>Forward approach, bounded final corrections, then final yaw.</description></class>
+  <class name="raicom_nav2_workspace::UnifiedRotateToGoalCritic" type="raicom_nav2_workspace::UnifiedRotateToGoalCritic" base_class_type="dwb_core::TrajectoryCritic"><description>Rechecks current position and shares Goal Checker tolerances each cycle.</description></class>
+</library>

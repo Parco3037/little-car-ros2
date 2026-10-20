@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>raicom_nav2_workspace</name><version>0.1.0</version>
+  <description>Optional forward approach and stateless DWB goal critic inside Nav2.</description>
+  <maintainer email="189249227+Parco3037@users.noreply.github.com">RAICOM Team</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend><depend>rclcpp_lifecycle</depend><depend>nav2_core</depend>
+  <depend>nav2_costmap_2d</depend><depend>nav2_util</depend><depend>dwb_core</depend>
+  <depend>dwb_msgs</depend><depend>nav_msgs</depend><depend>tf2</depend>
+  <exec_depend>nav2_theta_star_planner</exec_depend><exec_depend>dwb_critics</exec_depend>
+  <depend>nav_2d_msgs</depend><depend>pluginlib</depend><depend>tf2_geometry_msgs</depend>
+  <depend>tf2_ros</depend><depend>std_msgs</depend><depend>geometry_msgs</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

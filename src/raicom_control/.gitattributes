@@ -1,0 +1,3 @@
+models/*.urdf text eol=lf
+models/*.json text eol=lf
+deploy/*.patch text eol=lf

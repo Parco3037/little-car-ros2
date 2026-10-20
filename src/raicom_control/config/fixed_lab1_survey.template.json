@@ -1,0 +1,19 @@
+{
+  "binding": {
+    "map_yaml_sha256": "51d5bf647afd279f45e23b4411443d05b8f91a66513f91575285978618f01f23",
+    "map_pgm_sha256": "51255ed214a4bbf80e13eb7041e9dfee2dd06be90a5509597bed9d8425b4903f",
+    "formal_points_sha256": "a6754c56cc9ad78b505979fb7e9a9b26522c8043354555f0b46d352a3cf203a6"
+  },
+  "geometry_evidence": null,
+  "site_confirmed": false,
+  "pick_exit": null,
+  "turning_points": {
+    "start->shibie": null,
+    "shibie->pick": null,
+    "pick->pick_A": null,
+    "pick_A->pick_B": null,
+    "pick->pick_B": null,
+    "pick_A->pick": null,
+    "pick_B->pick": null
+  }
+}

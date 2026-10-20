@@ -1,0 +1,77 @@
+# RAICOM controller matched to the EXISTING guard, not the vendor rotation shim.
+# No motion acceptance implied. Use navigation_staging.launch.py for verification.
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    odom_topic: /odom
+    # At 0.25 m/s, 10 Hz advances at most 2.5 cm per cycle (close to one 2 cm
+    # map cell) while giving the Pi enough budget to meet the control loop.
+    controller_frequency: 10.0
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    failure_tolerance: 0.3
+    progress_checker_plugin: progress_checker
+    goal_checker_plugins: [general_goal_checker]
+    controller_plugins: [FollowPath]
+    progress_checker:
+      plugin: nav2_controller::SimpleProgressChecker
+      required_movement_radius: 0.05
+      movement_time_allowance: 15.0
+    general_goal_checker:
+      plugin: nav2_controller::SimpleGoalChecker
+      # Recheck position on every final heading check, including after drift.
+      stateful: false
+      xy_goal_tolerance: 0.02
+      yaw_goal_tolerance: 0.17453292519943295
+    FollowPath:
+      plugin: dwb_core::DWBLocalPlanner
+      debug_trajectory_details: false
+      min_vel_x: -0.25
+      min_vel_y: 0.0
+      max_vel_x: 0.25
+      max_vel_y: 0.0
+      max_vel_theta: 0.35
+      min_speed_xy: 0.0
+      max_speed_xy: 0.25
+      min_speed_theta: 0.0
+      acc_lim_x: 0.5
+      acc_lim_y: 0.0
+      acc_lim_theta: 0.7
+      decel_lim_x: -0.5
+      decel_lim_y: 0.0
+      decel_lim_theta: -0.7
+      # Retain the 0.025 m/s increments validated in the previous hall replay.
+      # 21*1*7 retains disabled lateral motion; the installed generator produced
+      # 175 candidates including its extra zero samples. Continuous native
+      # replay with PathDist=128 and GoalDist=64 remained below the 100 ms cycle.
+      vx_samples: 21
+      vy_samples: 1
+      vtheta_samples: 7
+      sim_time: 1.5
+      linear_granularity: 0.02
+      angular_granularity: 0.025
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.02
+      trans_stopped_velocity: 0.02
+      short_circuit_trajectory_evaluation: true
+      # DWB has no FollowPath.stateful parameter in the installed Humble.
+      # Final simultaneous acceptance belongs to general_goal_checker above.
+      # The 2026-09-02 park_2 run used only distance critics away from the goal.
+      # DWB therefore found a cheap trajectory that held -0.35 rad/s for about
+      # 45 seconds while strafing, travelling roughly 2 m without converging.
+      # Alignment critics make heading observable before RotateToGoal activates.
+      critics: [RotateToGoal, Oscillation, ObstacleFootprint, PathAlign, GoalAlign, PathDist, GoalDist]
+      ObstacleFootprint.scale: 1.0
+      PathAlign.scale: 32.0
+      PathAlign.forward_point_distance: 0.10
+      GoalAlign.scale: 24.0
+      GoalAlign.forward_point_distance: 0.10
+      # Keep departure turns close to the path; near the goal, approaching must
+      # outweigh the soft inflation-cost advantage of reversing away from it.
+      # ObstacleFootprint still rejects colliding candidates with the same margin.
+      PathDist.scale: 128.0
+      GoalDist.scale: 64.0
+      RotateToGoal.scale: 32.0
+      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.lookahead_time: -1.0

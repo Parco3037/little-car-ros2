@@ -1,0 +1,13 @@
+Little Car ROS 2 extensions
+Published by Parco3037.
+
+The self-authored extension packages are distributed under Apache-2.0.
+Existing author and copyright notices are retained.
+
+The bondcpp compatibility patch contains upstream context covered by the
+BSD license in src/raicom_control/compat/bondcpp/LICENSE. That license
+continues to apply to the upstream material.
+
+Vendor software, iFLYTEK SDKs, speech models, generated vendor robot
+descriptions, and precompiled libraries are not included in this release.
+See docs/THIRD_PARTY.md for the publication boundary and provenance notes.

@@ -1,0 +1,56 @@
+diff --git a/bondcpp/src/bond.cpp b/bondcpp/src/bond.cpp
+index d7908cd..b992490 100644
+--- a/bondcpp/src/bond.cpp
++++ b/bondcpp/src/bond.cpp
+@@ -394,12 +394,16 @@ void Bond::setBrokenCallback(std::function<void(void)> on_broken)
+ 
+ bool Bond::waitUntilFormed(rclcpp::Duration timeout)
+ {
+-  //  std::unique_lock<std::mutex> lock(mutex_);
++  // Lock only the state read; heartbeat transitions must run while waiting.
++  const auto state_id = [this]() {
++      std::unique_lock<std::mutex> lock(mutex_);
++      return sm_.getState().getId();
++    };
+   rclcpp::Clock steady_clock(RCL_STEADY_TIME);
+   rclcpp::Time deadline(steady_clock.now() + timeout);
+   rclcpp::Rate r(100);
+ 
+-  while (sm_.getState().getId() == SM::WaitingForSister.getId()) {
++  while (state_id() == SM::WaitingForSister.getId()) {
+     if (!rclcpp::ok()) {
+       break;
+     }
+@@ -414,17 +418,20 @@ bool Bond::waitUntilFormed(rclcpp::Duration timeout)
+     r.sleep();
+   }
+ 
+-  return sm_.getState().getId() != SM::WaitingForSister.getId();
++  return state_id() != SM::WaitingForSister.getId();
+ }
+ 
+ bool Bond::waitUntilBroken(rclcpp::Duration timeout)
+ {
+-  //  std::unique_lock<std::mutex> lock(mutex_);
++  const auto state_id = [this]() {
++      std::unique_lock<std::mutex> lock(mutex_);
++      return sm_.getState().getId();
++    };
+   rclcpp::Clock steady_clock(RCL_STEADY_TIME);
+   rclcpp::Time deadline(steady_clock.now() + timeout);
+   rclcpp::Rate r(100);
+ 
+-  while (sm_.getState().getId() != SM::Dead.getId()) {
++  while (state_id() != SM::Dead.getId()) {
+     if (!rclcpp::ok()) {
+       break;
+     }
+@@ -439,7 +446,7 @@ bool Bond::waitUntilBroken(rclcpp::Duration timeout)
+     r.sleep();
+   }
+ 
+-  return sm_.getState().getId() == SM::Dead.getId();
++  return state_id() == SM::Dead.getId();
+ }
+ 
+ bool Bond::isBroken()

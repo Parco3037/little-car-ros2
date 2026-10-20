@@ -1,0 +1,229 @@
+{
+  "source_selection": [
+    "rgbd_grasp",
+    "competition_manual",
+    "raicom_control"
+  ],
+  "excluded": [
+    {
+      "path": "competition_manual/model/am/final.mdl",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/conf/mfcc.conf",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/conf/model.conf",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/graph/disambig_tid.int",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/graph/Gr.fst",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/graph/HCLr.fst",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/graph/phones/word_boundary.int",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/final.dubm",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/final.ie",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/final.mat",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/global_cmvn.stats",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/online_cmvn.conf",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/ivector/splice.conf",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/model/README",
+      "reason": "Vosk model obtained separately"
+    },
+    {
+      "path": "competition_manual/sounds/ganma.wav",
+      "reason": "binary/audio asset obtained separately"
+    },
+    {
+      "path": "competition_manual/sounds/teleop_done.wav",
+      "reason": "binary/audio asset obtained separately"
+    },
+    {
+      "path": "raicom_control/compat/bondcpp/libbondcpp.so",
+      "reason": "binary/audio asset obtained separately"
+    },
+    {
+      "path": "raicom_control/config/navigation_approach_map_01_2cm_20260901_0240.json",
+      "reason": "site-specific route omitted"
+    },
+    {
+      "path": "raicom_control/config/route_map_01.json",
+      "reason": "site-specific route omitted"
+    },
+    {
+      "path": "raicom_control/config/route_map_01_2cm_20260901_0240.json",
+      "reason": "site-specific route omitted"
+    },
+    {
+      "path": "raicom_control/deploy/vendor_launch_disable_joy.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/deploy/vendor_mecanum_linear_calibration.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/deploy/vendor_mecanum_odom_xy.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/deploy/vendor_ms200_driver.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/deploy/vendor_robot_description_lightweight.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/deploy/yolo_infer_bbox.patch",
+      "reason": "vendor patch context pending provenance"
+    },
+    {
+      "path": "raicom_control/maps/home_mock_v1.pgm",
+      "reason": "local map omitted"
+    },
+    {
+      "path": "raicom_control/maps/home_mock_v1.yaml",
+      "reason": "local map omitted"
+    },
+    {
+      "path": "raicom_control/maps/map_01_2cm.pgm",
+      "reason": "local map omitted"
+    },
+    {
+      "path": "raicom_control/maps/map_01_2cm.yaml",
+      "reason": "local map omitted"
+    },
+    {
+      "path": "raicom_control/models/landerpi_lightweight.manifest.json",
+      "reason": "vendor-derived model generated locally"
+    },
+    {
+      "path": "raicom_control/models/landerpi_lightweight.urdf",
+      "reason": "vendor-derived model generated locally"
+    },
+    {
+      "path": "raicom_control/raicom_control/cmd_vel_guard.py.bak_nav_transition_20260924",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/cmd_vel_guard.py.before_competition_manual_20260924",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/cmd_vel_guard.py.before_manual_angular_accel_20260926",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/cmd_vel_guard.py.before_manual_speed_20260924",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_interface.py.before-depth-button-1790021623172040060",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_adaptive_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_center20_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_center_duration_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_front_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_rgbd_sync_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_smoothing_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_u320_floor_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_release.py.before_y_workspace_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_runner.py.before_front_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_pick_runner.py.before_smooth_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/depth_warm_runner.py.before_u320_floor_sync_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/field_tool_depth_ui.py.before-depth-button-1790021623172040060",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/field_tool_gui.py.before-depth-button-1790021623172040060",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/field_tool_sensors.py.bak_before_tf_executor_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/field_tool_sensors.py.bak_before_tf_lane_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/field_tool_sensors.py.bak_before_tf_latest_qos_20260923",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/raicom_control/navigation_acceptance_leg.py.orig",
+      "reason": "historical backup"
+    },
+    {
+      "path": "raicom_control/deploy/slam_toolbox_heading_gate/patch_source.py",
+      "reason": "helper embeds upstream source context; obtain exact upstream and local patch separately"
+    }
+  ]
+}

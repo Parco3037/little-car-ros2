@@ -1,0 +1,18 @@
+home_mission:
+  ros__parameters:
+    goal_configured: false
+    goal_x: 0.0
+    goal_y: 0.0
+    goal_yaw: 0.0
+    map_frame: map
+    stable_wait_ms: 500
+    localization_max_age_sec: 2.0
+    arrival_action_enabled: false
+    gripper_calibrated: false
+    gripper_servo_id: 10
+    gripper_open_pulse: 0.0
+    gripper_close_pulse: 0.0
+    gripper_max_delta_pulse: 80.0
+    gripper_duration_sec: 0.5
+    joint_state_max_age_sec: 2.0
+

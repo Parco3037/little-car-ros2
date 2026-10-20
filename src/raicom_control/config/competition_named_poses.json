@@ -1,0 +1,18 @@
+{
+  "schema": "raicom.user_named_poses/v1",
+  "source": "User supplied pose table 2026-09-23; ID10 close/release overridden by latest explicit instruction",
+  "physical_validation": "pending",
+  "servo_ids": [1, 2, 3, 4, 5, 10],
+  "gripper": {"id": 10, "close": 50, "open": 350},
+  "duration_s": 1.0,
+  "tolerance_pulse": 30,
+  "transport": [450, 500, 250, 400, 860, 50],
+  "classification_pose": [450, 620, 180, 260, 875, 50],
+  "poses": {
+    "auto1": [450, 463, 145, 501, 854, 348],
+    "2": [450, 430, 300, 429, 865, 300],
+    "3": [450, 425, 364, 390, 865, 301],
+    "4": [450, 377, 455, 450, 865, 299],
+    "init": [450, 820, 174, 93, 865, 298]
+  }
+}

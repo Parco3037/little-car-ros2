@@ -1,0 +1,5 @@
+<library path="raicom_body_clear_layer">
+  <class name="raicom_nav2_workspace::BodyClearLayer" type="raicom_nav2_workspace::BodyClearLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Clear cell centres within the current physical footprint plus the requested 5 mm margin after layer merging.</description>
+  </class>
+</library>

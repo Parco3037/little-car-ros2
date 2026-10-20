@@ -1,0 +1,21 @@
+scene_mission:
+  ros__parameters:
+    goal_configured: false
+    goal_x: 0.0
+    goal_y: 0.0
+    goal_yaw: 0.0
+    place_configured: false
+    place_x: 0.0
+    place_y: 0.0
+    place_yaw: 0.0
+    map_frame: map
+    stable_wait_ms: 500
+    localization_max_age_sec: 2.0
+    target_timeout_sec: 3.0
+    target_max_age_sec: 0.5
+    target_frame: depth_camera_link
+    arm_calibrated: false
+    gripper_calibrated: false
+    arm_stage_sec: 0.8
+    gripper_servo_id: 10
+    arm_profile_json: ''

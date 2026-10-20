@@ -1,0 +1,35 @@
+{
+  "route_bundle_sha256": null,
+  "transport_envelope_verified": false,
+  "transport": null,
+  "placements": {
+    "1": {
+      "approach": null,
+      "place": null,
+      "release": null,
+      "withdraw": null
+    },
+    "2": {
+      "approach": null,
+      "place": null,
+      "release": null,
+      "withdraw": null
+    },
+    "3": {
+      "approach": null,
+      "place": null,
+      "release": null,
+      "withdraw": null
+    },
+    "4": {
+      "approach": null,
+      "place": null,
+      "release": null,
+      "withdraw": null
+    }
+  },
+  "landing_verified": {
+    "pick_A": [],
+    "pick_B": []
+  }
+}

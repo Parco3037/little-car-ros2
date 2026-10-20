@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>competition_manual</name>
+  <version>0.1.0</version>
+  <description>Xbox manual input adapter for the MentorPi control stack.</description>
+  <maintainer email="189249227+Parco3037@users.noreply.github.com">Competition team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>servo_controller_msgs</exec_depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>raicom_control</exec_depend>
+  <exec_depend>xf_mic_asr_offline</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <!-- The Vosk Python wheel is installed separately in the container. -->
+  <export><build_type>ament_python</build_type></export>
+</package>
